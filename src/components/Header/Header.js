@@ -1,11 +1,16 @@
-import React from 'react';
+import React from "react";
 
-function Header() {
-  return (
-    <header>
-      <h1>Word Game</h1>
-    </header>
-  );
+function Header({ handleNewGame }) {
+	return (
+		<header>
+			<div className="title-container">
+				<h1>Wordle Replica</h1>
+			</div>
+			<div className="button-container">
+				<button onClick={handleNewGame}>New Game</button>
+			</div>
+		</header>
+	);
 }
 
 export default Header;
