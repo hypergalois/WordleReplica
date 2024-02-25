@@ -31,7 +31,8 @@ function Game({ answer, resetSignal }) {
 		if (numOfGuesses >= NUM_OF_GUESSES_ALLOWED) return;
 		const newGuess = [...checkGuess(nextGuess, answer)];
 		console.log(newGuess);
-		setGuesses([...guesses, newGuess]);
+		const nextGuessObj = [...guesses, newGuess];
+		setGuesses(nextGuessObj);
 
 		// OJO: las actualizaciones de estado de React son asincronas
 		setNumOfGuesses(numOfGuesses + 1);
@@ -47,8 +48,7 @@ function Game({ answer, resetSignal }) {
 
 		// console.log(numOfGuesses);
 
-		// Solución cutre para no usar useEffect (todavia no dado)
-		if (numOfGuesses + 1 === NUM_OF_GUESSES_ALLOWED) {
+		if (nextGuessObj.length === NUM_OF_GUESSES_ALLOWED) {
 			// Ha terminado el juego sin victoria (habria saltado el caso anterior)
 			console.log("Has perdido.");
 			setHasWonGame(false);
