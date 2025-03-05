@@ -1,6 +1,6 @@
-# 🎮 Juego de Palabras - Réplica de Wordle
+# 🎮 Word Game - Wordle Clone
 
-En este proyecto, recreamos el popular juego de palabras en línea, Wordle, ¡con un giro!
+In this project, we recreate the popular online word game, Wordle, with a twist!
 
-![Demostración del producto terminado, nuestra réplica de Wordle](images/wordle.png)
-![Diagrama](images/diagramWordle.png)
+![Demo of the finished product, our Wordle replica](images/wordle.png)
+![Diagram](images/diagramWordle.png)
